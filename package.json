@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/app.ts",
-    "start": "ts-node src/app.ts"
+    "dev": "tsc && npx knex migrate:latest --knexfile knexfile.ts migrate:latest",
+    "start": "node dist/app.js"
   },
   "keywords": [],
   "author": "",
