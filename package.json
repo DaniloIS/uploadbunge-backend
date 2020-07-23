@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc && npx knex migrate:latest --knexfile knexfile.ts migrate:latest",
+    "build": "tsc",
+    "migrations": "npx knex migrate:latest --knexfile knexfile.ts migrate:latest",
     "start": "node dist/app.js"
   },
   "keywords": [],
@@ -13,9 +14,11 @@
   "dependencies": {
     "celebrate": "^12.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.1",
     "multer": "^1.4.2",
+    "pg": "^8.3.0",
     "sqlite3": "^4.2.0"
   },
   "devDependencies": {

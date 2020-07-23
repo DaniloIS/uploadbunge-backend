@@ -1,8 +1,11 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import routes from './routes';
 import { errors } from 'celebrate';
+
+dotenv.config();
 
 const app = express();
 
